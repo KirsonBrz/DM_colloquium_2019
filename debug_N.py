@@ -37,7 +37,12 @@ def test_N_1():
     
     
 def test_N_2():
-    print(NZER_N_B(input_Natural("Введите число: ")))
+    res = NZER_N_B(input_Natural("Введите число: "))
+    print("Равно ли число 0:")
+    if res:
+        print("Да")
+    else:
+        print("Нет")
     
     
 def test_N_3():
