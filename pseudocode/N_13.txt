@@ -8,16 +8,16 @@
 ФУНКЦИЯ GCF_NN_N (натуральные n1, n2)
 	a := n1.копия
 	b := n2.копия
-	ЦИКЛ ПОКА((NZER_N_B(a)=нет И NZER_N_B(b)=нет)
+	ЦИКЛ ПОКА НЕ(NZER_N_B(a) или NZER_N_B(b))
 	НЦ
-		ЕСЛИ(COM_NN_D(a, b)=2) ТО
-			a := MOD_NN_N(a,b)
+		ЕСЛИ COM_NN_D(a, b) = 2 ТО
+			a := MOD_NN_N(a, b)
 		ИНАЧЕ
-			b := MOD_NN_N(b,a)
+			b := MOD_NN_N(b, a)
 		КЕ
 	КЦ
 
-	ЕСЛИ (NZER_N_B(a)=нет) ТО
+	ЕСЛИ NZER_N_B(b) ТО
 		ВЕРНУТЬ(a)
 	ИНАЧЕ
 		ВЕРНУТЬ(b)

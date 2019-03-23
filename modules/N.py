@@ -2,6 +2,7 @@ from modules.classes import *
 
 
 # N-1
+# Мохнаткин Кирилл
 def COM_NN_D(n1, n2):
     m = n1.n
     k = n2.n
@@ -20,6 +21,7 @@ def COM_NN_D(n1, n2):
         else:
             res = 1 
     return res
+
 
 # N-2
 def NZER_N_B (n):
@@ -43,14 +45,15 @@ def ADD_1N_N (n1):
 
 # N-4
 def ADD_NN_N (A, B):
+    # Если количество разрядов второго числа больше первого 
     if A.n < B.n:
         A, B = B, A
     
     C = Natural()
-    C.pop()
+    C.clear()
     k = 0
     i = 0
-    
+    # Сложение
     while (i <= A.n):
         if i <= B.n:
             C.append(B[i] + A[i] + k)
@@ -62,7 +65,7 @@ def ADD_NN_N (A, B):
         else:
             k = 0
         i += 1
-    
+    # Если количество разрядов у суммы больше чем у исходных
     C.n = A.n
     if k == 1:
         C.append(1)
@@ -91,7 +94,11 @@ def SUB_NN_N (N1, N2):
     elif COM_NN_D(n1, n2) == 1:
         assert False
         
-    n3.del_0s()
+    i = n3.n
+    while i > 0 and n3[i] == 0:
+        n3.pop()
+        n3.n -= 1
+        i -= 1
     return n3
 
 
@@ -142,7 +149,7 @@ def MUL_NN_N(n1, n2):
 
 # N-9
 def SUB_NDN_N(A, B, k):
-    sub = MUL_ND_N(B, k)
+    sub = MUL_ND_N(B, k) # B * k
     # Проверка, что A действительно больше или равно B*k
     if COM_NN_D(A, sub) != 1:
         sub = SUB_NN_N(A, sub)

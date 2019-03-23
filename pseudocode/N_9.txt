@@ -7,7 +7,6 @@ MUL_ND_N,COM_NN_D, SUB_NN_N */
 
 
 Функция SUB_NDN_N (A, B, k)
-	натуральное sub
 	sub:= MUL_ND_N(B,k) // B * k
 	// Проверка, что A действительно больше или равно B*k
 	Если (COM_NN_D(A, sub) != 1) 
