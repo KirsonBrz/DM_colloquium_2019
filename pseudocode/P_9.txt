@@ -7,24 +7,23 @@
 	ЕСЛИ p2.m = 0 И p2[0] = 0 ТО
 		Ошибка
 	ИНАЧЕ
-		n1 := p1
-		n2 := p2
-		n3 := многочлен(0)
+		n1 := p1.копия
+		n2 := p2.копия
+		n3 := заполнить p1.m нулями (Rational()) многочлен
 		
-		ЦИКЛ ПОКА DEG_P_N(n1)>=DEG_P_N(n2)
-			ЕСЛИ n1[n1.m].b = n2[n1.m].b
-				n1[n1.m].b := 0
-			ИНАЧЕ
-				n1[n1.m].b := 1
-			КЕ
-			
+		ЦИКЛ ПОКА DEG_P_N(n1)>=DEG_P_N(n2) 
+							и
+			(n1.m != 0 или n1[0].m.n != 0 или n1[0].m[0] !- 0)
+				
+			m := n1.m - n2.m
 			q := DIV_QQ_Q(n1[n1.m], n2[n2.m])
-			sub := MUL_Pxk_P(n2, n1.m - n2.m)
+			sub := MUL_Pxk_P(n2, m)
+			sub := MUL_PQ_P(sub, q)
 			
-			n1 := SUB_PP_P(n1, MUL_PQ_P(sub, q))
-			n3[n1.m-n2.m] := ADD_QQ_Q(n3[n1.m-n2.m], q)
-			n1.m := n1.m - 1
+			n1 := SUB_PP_P(n1, sub)
+			n3[m] := q
 		КЦ
+		n3.m := DEG_P_N(n3)
 		ВОЗВРАТ n3
 	КЕ
 	

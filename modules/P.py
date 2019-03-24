@@ -9,7 +9,7 @@ def ADD_PP_P(c1, c2):
     m1 = c1.m
     m2 = c2.m
     c = Polinomial()
-    c.pop()
+    c.clear()
     
     if m1 > m2:
         m1, m2 = m2, m1
@@ -32,8 +32,8 @@ def SUB_PP_P(C1, C2):
     c1 = C1.copy()
     c2 = C2.copy()
     mul = Rational (
-        Integer(1, 0, 1),
-        Natural(0, 1)
+        Integer(1, 0, 1), #-1
+        Natural(0, 1) # 1
     )
     c2 = MUL_PQ_P(c2, mul)
     c = ADD_PP_P(c1, c2)
@@ -46,7 +46,7 @@ def SUB_PP_P(C1, C2):
 def MUL_PQ_P(C, z):
     m = DEG_P_N(C)
     p = Polinomial()
-    p.pop()
+    p.clear()
     
     for i in range(m+1):
         if C[i] == 0:
@@ -90,8 +90,8 @@ def DEG_P_N(P):
 def FAC_P_Q(p):
     q = Rational()
     if p.m != 0:
-        prevk = ABS_Z_N(p[0].m.copy())
-        prevd = ABS_Z_N(p[0].n.copy())
+        prevk = ABS_Z_N(p[0].m)
+        prevd = p[0].n.copy()
         s = p[0].m.copy()
         for i in range(1, p.m + 1):
             prevk = LCM_NN_N(prevk, ABS_Z_N(p[i].m))
@@ -126,7 +126,10 @@ def DIV_PP_P(p1, p2):
         n2 = p2.copy()
         n3 = Polinomial(p1.m, *[Rational() for i in range(p1.m+1)])
         
-        while DEG_P_N(n1) >= DEG_P_N(n2) and (n1.m != 0 or n1[0].m.n != 0 or n1[0].m[0] != 0):
+        while DEG_P_N(n1) >= DEG_P_N(n2) \
+                        and \
+              (n1.m != 0 or n1[0].m.n != 0 or n1[0].m[0] != 0):
+            
             m = n1.m - n2.m
             q = DIV_QQ_Q(n1[n1.m], n2[n2.m])
             sub = MUL_Pxk_P(n2, m)
@@ -161,6 +164,7 @@ def MOD_PP_P(p1, p2):
 def GCF_PP_P(A, B):
     a = A.copy()
     b = B.copy()
+    # Пока не (a == 0 или b == 0)
     while not ((a.m == 0 and a[0].m.n == 0 and a[0].m[0] == 0) \
                                 or \
                (b.m == 0 and b[0].m.n == 0 and b[0].m[0] == 0)):
@@ -191,7 +195,7 @@ def DER_P_P(C):
     m = DEG_P_N(C)
     
     P = Polinomial()
-    P.pop()
+    P.clear()
     I = Integer()
     i = 0
     while i < m:
