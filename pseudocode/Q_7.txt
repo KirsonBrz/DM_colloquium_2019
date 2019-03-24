@@ -6,5 +6,6 @@
 	q3 = Создать дробь
 	q3.m := MUL_ZZ_Z(q1.m,q2.m)
 	q3.n := MUL_NN_N(q1.n,q2.n)
+	q3 := RED_Q_Q(q3)
 	ВЕРНУТЬ q3
 КФ

@@ -2,6 +2,7 @@ from modules.classes import *
 
 
 # N-1
+# Сравнение натуральных чисел
 # Мохнаткин Кирилл
 def COM_NN_D(n1, n2):
     m = n1.n
