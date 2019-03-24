@@ -47,6 +47,22 @@ class Integer(Natural):
     
     def copy(self):
         return Integer(self.b, self.n, *super().copy())
+    
+    
+    def __str__(self):
+        string = super().__str__()
+        if self.b == 1:
+            string = '-' + string
+        return string
+    
+    
+    def read_from_str(self, string):
+        if string[0] == '-':
+            self.b = 1
+            string = string[1::]
+        elif string[0] == '+':
+            string = string[1::]
+        super().read_from_str(string)
 
 
 class Rational:

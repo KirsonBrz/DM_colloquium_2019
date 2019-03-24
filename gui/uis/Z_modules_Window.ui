@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NModulesWindowMain</class>
- <widget class="QDialog" name="NModulesWindowMain">
+ <class>ZModulesWindowMain</class>
+ <widget class="QDialog" name="ZModulesWindowMain">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +9,12 @@
     <width>403</width>
     <height>314</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Модули N</string>
@@ -32,7 +38,7 @@
     <string>Главное меню</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_bin">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -48,7 +54,7 @@
     <string>Основные бинарные операции</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_other">
    <property name="geometry">
     <rect>
      <x>80</x>
