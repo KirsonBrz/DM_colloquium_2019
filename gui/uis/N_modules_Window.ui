@@ -32,7 +32,7 @@
     <string>Главное меню</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="buttonBin">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -48,7 +48,7 @@
     <string>Основные бинарные операции</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="ButtonOther">
    <property name="geometry">
     <rect>
      <x>80</x>

@@ -63,7 +63,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="line_n1">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -85,7 +85,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="line_n2">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -104,7 +104,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="operations">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -204,7 +204,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="result">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -233,7 +233,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QToolButton" name="toolButton">
+  <widget class="QToolButton" name="pushButton_return">
    <property name="geometry">
     <rect>
      <x>0</x>
