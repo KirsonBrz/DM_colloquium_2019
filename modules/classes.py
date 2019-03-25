@@ -73,6 +73,10 @@ class Rational:
     
     def copy(self):
         return Rational(self.m.copy(), self.n.copy())
+    
+    
+    def __str__(self):
+        return str(self.m)+'/'+str(self.n)
         
 
 class Polinomial (list):

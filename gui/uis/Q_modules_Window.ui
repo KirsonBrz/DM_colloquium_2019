@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NModulesWindowMain</class>
- <widget class="QDialog" name="NModulesWindowMain">
+ <class>QModulesWindowMain</class>
+ <widget class="QDialog" name="QModulesWindowMain">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -32,7 +32,7 @@
     <string>Главное меню</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_bin">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -53,7 +53,7 @@
     <string>Основные бинарные операции</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_other">
    <property name="geometry">
     <rect>
      <x>80</x>

@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import *
 from gui.MainWindow import *
 from gui.NWindows import *
 from gui.ZWindows import *
+from gui.QWindows import *
 import debug_N, debug_Z, debug_Q, debug_P
 
 
@@ -17,6 +18,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.napp = NModulesWindow(main=self)
         self.zapp = ZModulesWindow(main=self)
+        self.qapp = QModulesWindow(main=self)
         
         self.ui.pushButton_N.clicked.connect(self.button_N_clicked)
         self.ui.pushButton_Z.clicked.connect(self.button_Z_clicked)
@@ -36,7 +38,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def button_Q_clicked(self):
         self.hide()
-        debug_Q.main()
+        self.qapp.show()
     
     
     def button_P_clicked(self):

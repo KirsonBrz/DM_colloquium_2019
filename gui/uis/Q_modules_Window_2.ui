@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>QModulesWindow2</class>
+ <widget class="QDialog" name="QModulesWindow2">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -63,7 +63,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="line_qm">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -85,7 +85,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="operation">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -99,22 +99,17 @@
     </property>
     <item>
      <property name="text">
-      <string>Сумма</string>
+      <string>Сокращение</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Разность</string>
+      <string>Проверка на целое</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Произведение</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Деление</string>
+      <string>Преобразование в целое</string>
      </property>
     </item>
    </widget>
@@ -160,7 +155,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="result">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -188,7 +183,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="line_qn">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -201,14 +196,14 @@
      <string notr="true">color: white; background-color: #E80C94;</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
   </widget>
-  <widget class="QToolButton" name="toolButton">
+  <widget class="QToolButton" name="pushButton_return">
    <property name="geometry">
     <rect>
      <x>0</x>

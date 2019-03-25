@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>QModulesWindow1</class>
+ <widget class="QDialog" name="QModulesWindow1">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -63,7 +63,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="line_q1m">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -85,7 +85,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="line_q2m">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -104,7 +104,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="operation">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -179,7 +179,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="result">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -207,7 +207,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="line_q1n">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -220,13 +220,13 @@
      <string notr="true">color: white; background-color: #E80C94;</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="line_q2n">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -239,14 +239,14 @@
      <string notr="true">color: white; background-color: #E80C94;</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
   </widget>
-  <widget class="QToolButton" name="toolButton">
+  <widget class="QToolButton" name="pushButton_return">
    <property name="geometry">
     <rect>
      <x>0</x>
