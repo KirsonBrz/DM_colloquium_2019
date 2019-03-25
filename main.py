@@ -8,7 +8,7 @@ from gui.MainWindow import *
 from gui.NWindows import *
 from gui.ZWindows import *
 from gui.QWindows import *
-import debug_N, debug_Z, debug_Q, debug_P
+from gui.PWindows import *
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -19,6 +19,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.napp = NModulesWindow(main=self)
         self.zapp = ZModulesWindow(main=self)
         self.qapp = QModulesWindow(main=self)
+        self.papp = PModulesWindow(main=self)
         
         self.ui.pushButton_N.clicked.connect(self.button_N_clicked)
         self.ui.pushButton_Z.clicked.connect(self.button_Z_clicked)
@@ -43,7 +44,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def button_P_clicked(self):
         self.hide()
-        debug_P.main()    
+        self.papp.show()   
         
 
 def main():
