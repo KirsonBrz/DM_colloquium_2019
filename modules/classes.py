@@ -8,14 +8,7 @@ class Natural (list):
     
     def copy(self):
         return Natural(self.n, *super().copy())
-    
-    
-    def del_0s(self):
-        i = self.n
-        while i > 0 and self[i] == 0:
-            self.pop()
-            self.n -= 1
-            i -= 1
+        
     
     # Перевод в строку
     def __str__(self):
@@ -89,3 +82,13 @@ class Polinomial (list):
     
     def copy(self):
         return Polinomial(self.m, *super().copy())
+    
+    
+    def __str__(self):
+        p = self.copy()
+        p.reverse()
+        string = ''
+        for i in range(p.m):
+            string += '('+str(p[i])+")x^"+str(p.m-i)+' + '
+        string += str(p[p.m])
+        return string

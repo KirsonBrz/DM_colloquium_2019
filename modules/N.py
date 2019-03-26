@@ -91,7 +91,12 @@ def SUB_NN_N (N1, N2):
     elif COM_NN_D(n1, n2) == 1:
         assert False
         
-    n3.del_0s()
+    i = n3.n
+    while i > 0 and n3[i] == 0:
+        n3.pop()
+        n3.n -= 1
+        i -= 1
+        
     return n3
 
 

@@ -7,7 +7,7 @@ from gui.P_modules_Window import *
 from gui.P_modules_Window_1 import *
 from gui.P_modules_Window_2 import *
 from gui.P_modules_Window_3 import *
-
+from gui.P_modules_Window_input import *
 
 from modules.P import *
 
@@ -118,12 +118,15 @@ class PModulesWindow2(QtWidgets.QMainWindow):
         # Инициализация свойств
         self.main = main
         self.operation = 0
-        
+        self.nump = Polinomial()
+        self.output = []
+        self.input_p_win = PModulesWindowInput(main=self, output=self.output)
+        self.input_p = self.ui.pushButton_inputp
         self.res = self.ui.result
         # Присоеднинение методов
         self.ui.pushButton_return.clicked.connect(self.pushButton_return_clicked)
         self.ui.operation.currentIndexChanged.connect(self.operation_changed)
-        
+        self.input_p.clicked.connect(self.input_p_clicked)
         
         
     def pushButton_return_clicked(self):
@@ -133,6 +136,18 @@ class PModulesWindow2(QtWidgets.QMainWindow):
     
     def operation_changed(self, i):
         self.operation = int(i)
+        self.count()
+    
+    
+    def input_p_clicked(self):
+        self.hide()
+        self.input_p_win.show()
+    
+    
+    def p_inputed(self):
+        self.nump = self.output[0].copy()
+        self.output.clear()
+        self.ui.polinomial.setText(str(self.nump))
         self.count()
         
     
@@ -169,7 +184,16 @@ class PModulesWindow2(QtWidgets.QMainWindow):
     
     def count(self):
         res = "Error"
-        
+        if self.operation == 0:
+            res = str(LED_P_Q(self.nump))
+        elif self.operation == 1:
+            res = str(DEG_P_N(self.nump))
+        elif self.operation == 2:
+            res = str(FAC_P_Q(self.nump))
+        elif self.operation == 3:
+            res = str(DER_P_P(self.nump))
+        elif self.operation == 4:
+            res = str(NMR_P_P(self.nump))
         self.res.setText(res)
 
 
@@ -236,3 +260,115 @@ class PModulesWindow3(QtWidgets.QMainWindow):
         res = "Error"
         
         self.res.setText(res)
+
+
+class PModulesWindowInput(QtWidgets.QMainWindow):
+    def __init__(self, parent=None, main=None, output=None):
+        QtWidgets.QWidget.__init__(self, parent)
+        self.ui = Ui_Polinomial_Input()
+        self.ui.setupUi(self)
+        # Инициализация свойств
+        self.main = main
+        self.output = output
+        self.qm = self.ui.line_qm
+        self.qn = self.ui.line_qn
+        self.finish = self.ui.pushButton_finish
+        self.back = self.ui.pushButton_back
+        self.forward = self.ui.pushButton_forward
+        self.res = self.ui.result
+        self.clear()
+        # Присоеднинение методов
+        self.qm.textEdited.connect(self.qm_changed)
+        self.qn.textEdited.connect(self.qn_changed)         
+        self.finish.clicked.connect(self.finish_clicked)
+        self.back.clicked.connect(self.back_clicked)
+        self.forward.clicked.connect(self.forward_clicked)
+    
+    
+    def clear(self):
+        self.numq = Rational()
+        self.nump = Polinomial()
+        self.nump[0] = self.numq
+        self.qm.setText("0")
+        self.qn.setText("1")
+        self.res.setText(str(self.nump))
+        
+        
+    def finish_clicked(self):
+        self.hide()
+        self.output.append(self.nump.copy())
+        self.clear()
+        self.main.show()
+        self.main.p_inputed()
+    
+    
+    def back_clicked(self):
+        if self.nump.m != 0:
+            self.nump.m -= 1
+            self.nump.pop()
+            self.numq = self.nump[self.nump.m]
+            self.res.setText(str(self.nump))
+            self.qm.setText(str(self.numq.m))
+            self.qn.setText(str(self.numq.n))        
+    
+    
+    def forward_clicked(self):
+        self.nump[self.nump.m] = self.numq.copy()
+        self.numq = Rational()
+        self.nump.append(self.numq)
+        self.nump.m += 1
+        self.res.setText(str(self.nump))
+        self.qm.setText("0")
+        self.qn.setText("1")
+    
+    
+    def __clear_text(self, text):
+        nums = ''
+        for c in text:
+            if c in "1234567890":
+                nums += c
+        i = 0
+        while i < len(nums)-1 and nums[i] == '0':
+            i += 1
+        cleared = ''
+        for j in range(i, len(nums)):
+            cleared += nums[j]
+        if cleared == '':
+            cleared = '0'
+        return cleared
+    
+    
+    # Очистка текста
+    def __clear_text_int(self, text):
+        b = 0
+        if text[0] == '-':
+            b = 1
+            text = text[1::]
+        elif text[0] == '+':
+            text = text[1::]
+        
+        cleared = self.__clear_text(text)
+        
+        if cleared != '0' and b == 1:
+            cleared = '-' + cleared
+        return cleared 
+        
+    
+    def qm_changed(self):
+        text = self.qm.text()
+        text = self.__clear_text_int(text)
+        self.qm.setText(text)
+        self.numq.m.read_from_str(text)
+        self.nump[self.nump.m] = self.numq
+        self.res.setText(str(self.nump))
+    
+    
+    def qn_changed(self):
+        text = self.qn.text()
+        text = self.__clear_text(text)
+        if text == '0':
+            text = '1'        
+        self.qn.setText(text)
+        self.numq.n.read_from_str(text)
+        self.nump[self.nump.m] = self.numq
+        self.res.setText(str(self.nump))
