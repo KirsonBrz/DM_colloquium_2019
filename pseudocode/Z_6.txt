@@ -1,4 +1,4 @@
-// Шакарун
+﻿// Смирнова
 // ABS_Z_N, ADD_NN_N, TRANS_N_Z, COM_NN_D, SUB_NN_N
 
 Функция ADD_ZZ_Z(целое z1, целое z2)
