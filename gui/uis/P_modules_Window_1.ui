@@ -173,7 +173,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="polinomial1">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -201,7 +201,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="polinomial2">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -229,7 +229,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_inputp1">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -245,7 +245,7 @@
      <string>Ввести</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_inputp2">
     <property name="geometry">
      <rect>
       <x>330</x>

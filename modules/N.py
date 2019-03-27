@@ -141,7 +141,6 @@ def MUL_NN_N(n1, n2):
     n3 = Natural()
     for i in range(n2.n+1):
         n3 = ADD_NN_N(n3, MUL_Nk_N(MUL_ND_N(n1, n2[i]), i))
-    
     return n3
 
 
