@@ -1,4 +1,3 @@
-// Шакарун
 // DIV_ZZ_Z, MUL_ZZ_Z, SUB_ZZ_Z
 
 Функция MOD_ZZ_Z (целое z1, целое z2)

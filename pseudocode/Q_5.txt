@@ -1,6 +1,5 @@
 Q-5| 
 ---+
-// Дьяченко
 // Ссылается на - LCM_NN_N, DIV_NN_N, TRANS_N_Z, MUL_ZZ_Z, ADD_ZZ_Z, RED_Q_Q
 
 Функция ADD_QQ_Q (дробь q1, дробь q2)
