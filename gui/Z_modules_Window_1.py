@@ -87,7 +87,7 @@ class Ui_ZModulesWindow1(object):
 
     def retranslateUi(self, ZModulesWindow1):
         _translate = QtCore.QCoreApplication.translate
-        ZModulesWindow1.setWindowTitle(_translate("ZModulesWindow1", "Dialog"))
+        ZModulesWindow1.setWindowTitle(_translate("ZModulesWindow1", "Основные бинарный операции"))
         self.label_3.setText(_translate("ZModulesWindow1", "Введите 2 целых числа:"))
         self.line_n1.setText(_translate("ZModulesWindow1", "0"))
         self.line_n2.setText(_translate("ZModulesWindow1", "0"))

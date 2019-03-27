@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Преобразования многочлена</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">

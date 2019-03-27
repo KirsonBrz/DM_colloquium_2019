@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_PModulesWindowMain(object):
     def setupUi(self, PModulesWindowMain):
         PModulesWindowMain.setObjectName("PModulesWindowMain")
-        PModulesWindowMain.resize(403, 335)
+        PModulesWindowMain.resize(403, 352)
         PModulesWindowMain.setStyleSheet("background-color: white")
         self.pushButton_main = QtWidgets.QPushButton(PModulesWindowMain)
         self.pushButton_main.setGeometry(QtCore.QRect(0, 0, 101, 31))
@@ -54,11 +54,11 @@ class Ui_PModulesWindowMain(object):
 
     def retranslateUi(self, PModulesWindowMain):
         _translate = QtCore.QCoreApplication.translate
-        PModulesWindowMain.setWindowTitle(_translate("PModulesWindowMain", "Модули N"))
+        PModulesWindowMain.setWindowTitle(_translate("PModulesWindowMain", "Модули P"))
         self.pushButton_main.setText(_translate("PModulesWindowMain", "Главное меню"))
         self.pushButton_bin.setText(_translate("PModulesWindowMain", "Основные бинарные операции"))
         self.pushButton_un.setText(_translate("PModulesWindowMain", "Преобразования многочлена"))
-        self.label.setText(_translate("PModulesWindowMain", "Рациональные числа"))
+        self.label.setText(_translate("PModulesWindowMain", "Многочлены"))
         self.pushButton_other.setText(_translate("PModulesWindowMain", "Прочие действия"))
 
 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Основные бинарные операции</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: white</string>

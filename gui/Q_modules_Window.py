@@ -47,7 +47,7 @@ class Ui_QModulesWindowMain(object):
 
     def retranslateUi(self, QModulesWindowMain):
         _translate = QtCore.QCoreApplication.translate
-        QModulesWindowMain.setWindowTitle(_translate("QModulesWindowMain", "Модули N"))
+        QModulesWindowMain.setWindowTitle(_translate("QModulesWindowMain", "Модули Q"))
         self.pushButton_main.setText(_translate("QModulesWindowMain", "Главное меню"))
         self.pushButton_bin.setText(_translate("QModulesWindowMain", "Основные бинарные операции"))
         self.pushButton_other.setText(_translate("QModulesWindowMain", "Прочие действия"))

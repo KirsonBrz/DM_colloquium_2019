@@ -95,7 +95,7 @@ class Ui_PModulesWindow3(object):
 
     def retranslateUi(self, PModulesWindow3):
         _translate = QtCore.QCoreApplication.translate
-        PModulesWindow3.setWindowTitle(_translate("PModulesWindow3", "Dialog"))
+        PModulesWindow3.setWindowTitle(_translate("PModulesWindow3", "Прочие действия"))
         self.label_3.setText(_translate("PModulesWindow3", "Введите многочлен и число:"))
         self.operation.setItemText(0, _translate("PModulesWindow3", "Умножение на число"))
         self.operation.setItemText(1, _translate("PModulesWindow3", "Умножение на x^k"))

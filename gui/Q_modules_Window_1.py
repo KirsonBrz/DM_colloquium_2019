@@ -91,7 +91,7 @@ class Ui_QModulesWindow1(object):
 
     def retranslateUi(self, QModulesWindow1):
         _translate = QtCore.QCoreApplication.translate
-        QModulesWindow1.setWindowTitle(_translate("QModulesWindow1", "Dialog"))
+        QModulesWindow1.setWindowTitle(_translate("QModulesWindow1", "Прочие действия"))
         self.label_3.setText(_translate("QModulesWindow1", "Введите 2 рациональных числа:"))
         self.line_q1m.setText(_translate("QModulesWindow1", "0"))
         self.line_q2m.setText(_translate("QModulesWindow1", "0"))

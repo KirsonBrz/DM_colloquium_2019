@@ -80,7 +80,7 @@ class Ui_ZModulesWindow2(object):
 
     def retranslateUi(self, ZModulesWindow2):
         _translate = QtCore.QCoreApplication.translate
-        ZModulesWindow2.setWindowTitle(_translate("ZModulesWindow2", "Dialog"))
+        ZModulesWindow2.setWindowTitle(_translate("ZModulesWindow2", "Прочие действия"))
         self.label_3.setText(_translate("ZModulesWindow2", "Введите целое число:"))
         self.operations.setItemText(0, _translate("ZModulesWindow2", "Абсолютная величина"))
         self.operations.setItemText(1, _translate("ZModulesWindow2", "Сравнение с нулем"))

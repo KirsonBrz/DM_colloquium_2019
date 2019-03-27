@@ -83,7 +83,7 @@ class Ui_QModulesWindow2(object):
 
     def retranslateUi(self, QModulesWindow2):
         _translate = QtCore.QCoreApplication.translate
-        QModulesWindow2.setWindowTitle(_translate("QModulesWindow2", "Dialog"))
+        QModulesWindow2.setWindowTitle(_translate("QModulesWindow2", "Основные бинарные операции"))
         self.label_3.setText(_translate("QModulesWindow2", "Введите рациональное число:"))
         self.line_qm.setText(_translate("QModulesWindow2", "0"))
         self.operation.setItemText(0, _translate("QModulesWindow2", "Сокращение"))

@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Polinomial_Input(object):
     def setupUi(self, Polinomial_Input):
         Polinomial_Input.setObjectName("Polinomial_Input")
-        Polinomial_Input.resize(400, 308)
+        Polinomial_Input.resize(400, 316)
         self.PModulesWindowInput = QtWidgets.QFrame(Polinomial_Input)
         self.PModulesWindowInput.setGeometry(QtCore.QRect(0, 0, 401, 311))
         font = QtGui.QFont()
@@ -81,7 +81,7 @@ class Ui_Polinomial_Input(object):
 
     def retranslateUi(self, Polinomial_Input):
         _translate = QtCore.QCoreApplication.translate
-        Polinomial_Input.setWindowTitle(_translate("Polinomial_Input", "Dialog"))
+        Polinomial_Input.setWindowTitle(_translate("Polinomial_Input", "Ввод многочлена"))
         self.label_3.setText(_translate("Polinomial_Input", "Ввод многочлена"))
         self.label_2.setText(_translate("Polinomial_Input", "Текущий многочлен:"))
         self.result.setText(_translate("Polinomial_Input", "0"))

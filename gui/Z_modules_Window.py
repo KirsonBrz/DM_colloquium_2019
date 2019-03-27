@@ -46,7 +46,7 @@ class Ui_ZModulesWindowMain(object):
 
     def retranslateUi(self, ZModulesWindowMain):
         _translate = QtCore.QCoreApplication.translate
-        ZModulesWindowMain.setWindowTitle(_translate("ZModulesWindowMain", "Модули N"))
+        ZModulesWindowMain.setWindowTitle(_translate("ZModulesWindowMain", "Модули Z"))
         self.pushButton_main.setText(_translate("ZModulesWindowMain", "Главное меню"))
         self.pushButton_bin.setText(_translate("ZModulesWindowMain", "Основные бинарные операции"))
         self.pushButton_other.setText(_translate("ZModulesWindowMain", "Прочие действия"))

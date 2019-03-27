@@ -95,7 +95,7 @@ class Ui_PModulesWindow1(object):
 
     def retranslateUi(self, PModulesWindow1):
         _translate = QtCore.QCoreApplication.translate
-        PModulesWindow1.setWindowTitle(_translate("PModulesWindow1", "Dialog"))
+        PModulesWindow1.setWindowTitle(_translate("PModulesWindow1", "Основные бинарные операции"))
         self.label_3.setText(_translate("PModulesWindow1", "Введите 2 многочлена:"))
         self.operation.setItemText(0, _translate("PModulesWindow1", "Сумма"))
         self.operation.setItemText(1, _translate("PModulesWindow1", "Разность"))
