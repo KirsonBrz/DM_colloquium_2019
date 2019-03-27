@@ -5,10 +5,8 @@
 
 Подробнее: https://sites.google.com/site/snpozdniakov/ucebnaa/kollokvium-dm
 
-Список группы: https://docs.google.com/document/d/1JStQPXdxJcTnWMfPJogqP3Ny7d7vGfIXmrDK2lgYKFs
-
-Задачи и ход работы: https://docs.google.com/document/d/1Y0fUfdvFIlJ8MoWPGJeUogQwxrGeas2IeGBL17puaiU
-
-Рапределение для тестирования: https://docs.google.com/document/d/1GrUGH7gxKYMrTuBL7yltVq0t9wntW2czWGSbTjKvDmw/edit
+Список группы: https://docs.google.com/document/d/1wUmpj7wnwdnLsqhXrR4MlNLVdfs2u1fz4hTzskSGGJ8
 
 Для запуска необходимо загрузить Python 3.7.2 или новее c официального сайта: https://python.org/
+
+Для работы графики необходимо установить библиотеку PyQt5
