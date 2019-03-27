@@ -9,3 +9,14 @@
 Для запуска необходимо загрузить Python 3.7.2 или новее c официального сайта: https://python.org/
 
 Для работы графики необходимо установить библиотеку PyQt5
+
+Установка PyQt5:
+
+Windows:
+1) Воспользоваться утилитой pip (написать в cmd):
+pip3 install pyqt5 pyqt5-tools
+2) Скачать с официального сайта:
+https://www.riverbankcomputing.com/software/pyqt/download5
+
+Linux:
+sudo apt-get install python3-pyqt5 pyqt5-dev-tools
