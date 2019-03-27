@@ -1,7 +1,9 @@
 // ???
 // Ссылается на DIV_NN_N, SUB_NN_N, MUL_NN_N
 
-функция MOD_NN_N (натуральные n1, n2)
+функция MOD_NN_N (натуральные N1, N2)
+	n1 := N1.копия
+	n2 := N2.копия
 	Div := DIV_NN_N(n1, n2)
 	Mod := SUB_NN_N(n1, MUL_NN_N(Div, n2))
 	вернуть Mod

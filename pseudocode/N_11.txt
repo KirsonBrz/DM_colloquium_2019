@@ -13,8 +13,8 @@ NZER_N_B, SUB_NN_N, AD_1N_N, COM_NN_D */
 	Если NZER_N_B(B) то //Проверка делителя на 0
 		Ошибка 
 	Иначе 
-		cA := A
-		Цикл пока (COM_NN_D(cA, B) != 1)
+		cA := A.копия
+		Цикл пока COM_NN_D(cA, B) != 1
 		НЦ
 			cA := SUB_NN_N (cA , B) // Вычитаем из числа А число B
 			k := AD_1N_N(k)

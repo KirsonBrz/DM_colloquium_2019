@@ -1,11 +1,11 @@
 // Здобнова
-Ссылается на - MOD_ZZ_Z, TRANS_N_Z
+// Ссылается на - MOD_NN_N, NZER_N_B, ABS_Z_N
 
 ФУНКЦИЯ INT_Q_B (дробь q) // m-целое n-натуральное
-	m = q.m.копия
+	m = ABS_Z_N(q.m)
 	n = q.n.копия
-	d := MOD_ZZ_Z(m, TRANS_N_Z(n))
-	ЕСЛИ (d = 0)
+	d := MOD_NN_N(m, n)
+	ЕСЛИ NZER_N_B(d)
 		A := Да
 	ИНАЧЕ
 		A := Нет

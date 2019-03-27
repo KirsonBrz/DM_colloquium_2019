@@ -3,8 +3,9 @@
 // ADD_NN_N, MUL_Nk_N, MUL_ND_N
 
 функция MUL_NN_N(целое n1,целое n2)
+	n3 := Натуральное()
 	цикл по i от 0 до n2.n
-		n3 := ADD_NN_N(n3, MUL_Nk_N(MUL_ND_N(n1, n2.A[i]), i))
+		n3 := ADD_NN_N(n3, MUL_Nk_N(MUL_ND_N(n1, n2[i]), i))
 	кц
 	возврат n3
 кф

@@ -32,7 +32,7 @@ def MUL_ZM_Z(z):
 # Z-4
 def TRANS_N_Z(x):
     z = Integer()
-    z.pop()
+    z.clear()
     z.b = 0
     z.n = x.n
     i = 0

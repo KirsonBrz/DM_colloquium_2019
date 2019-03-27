@@ -49,7 +49,7 @@ def TRANS_Q_Z(q):
 
 # Q-5
 def ADD_QQ_Q(q1, q2):
-    nok = LCM_NN_N(q1.n, q2.n)
+    nok = LCM_NN_N(q1.n, q2.n) # НОК знаменателей
     
     t = DIV_NN_N(nok, q1.n)
     t = TRANS_N_Z(t)

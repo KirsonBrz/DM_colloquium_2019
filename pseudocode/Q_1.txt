@@ -3,8 +3,13 @@
 // Сокращение дроби
 функция RED_Q_Q (дробь q1)
 	q := q1.копия
-	gcf := GCF_NN_N(ABS_Z_N(q.m), q.n)
-	q.m := DIV_ZZ_Z(q.m, gcf)
-	q.n := TRANS_Z_N(DIV_ZZ_Z(TRANS_N_Z(q.n), gcf))
+	Если q.m.n != 0 или q.m[0] != 0
+		gcf := TRANS_N_Z(GCF_NN_N(ABS_Z_N(q.m), q.n))
+		b := q.m.b
+		q.m := DIV_ZZ_Z(TRANS_N_Z(ABS_Z_N(q.m)), gcf)
+		q.m.b := b
+		q.n := TRANS_Z_N(DIV_ZZ_Z(TRANS_N_Z(q.n), gcf))
+	Иначе
+		q.n := Натуральное(0, 1)
 	возврат q
 кф
