@@ -51,10 +51,14 @@ class Integer(Natural):
     
     def read_from_str(self, string):
         if string[0] == '-':
-            self.b = 1
+            if string != '-0':
+                self.b = 1
             string = string[1::]
         elif string[0] == '+':
             string = string[1::]
+            self.b = 0
+        else:
+            self.b = 0
         super().read_from_str(string)
 
 

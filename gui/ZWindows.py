@@ -72,11 +72,12 @@ class ZModulesWindow1(QtWidgets.QMainWindow):
     # Очистка текста
     def __clear_text(self, text):
         b = 0
-        if text[0] == '-':
-            b = 1
-            text = text[1::]
-        elif text[0] == '+':
-            text = text[1::]
+        if text != '':
+            if text[0] == '-':
+                b = 1
+                text = text[1::]
+            elif text[0] == '+':
+                text = text[1::]
         
         nums = ''
         for c in text:
@@ -90,7 +91,7 @@ class ZModulesWindow1(QtWidgets.QMainWindow):
             cleared += nums[j]
         if cleared == '':
             cleared = '0'
-        elif b == 1:
+        elif b == 1 and cleared != '0':
             cleared = '-' + cleared
         return cleared
     
@@ -158,11 +159,12 @@ class ZModulesWindow2(QtWidgets.QMainWindow):
     # Очистка текста
     def __clear_text(self, text):
         b = 0
-        if text[0] == '-':
-            b = 1
-            text = text[1::]
-        elif text[0] == '+':
-            text = text[1::]
+        if text != '':
+            if text[0] == '-':
+                b = 1
+                text = text[1::]
+            elif text[0] == '+':
+                text = text[1::]
         
         nums = ''
         for c in text:
@@ -195,14 +197,13 @@ class ZModulesWindow2(QtWidgets.QMainWindow):
             res = str(ABS_Z_N(self.num))
         elif self.operation == 1:
             res = str(POZ_Z_D(self.num))
-            if res == 0:
+            if res == '0':
                 res += " (равное нулю)"
-            elif res == 1:
+            elif res == '1':
                 res += " (меньше нуля)"
-            else:
+            elif res == '2':
                 res += " (больше нуля)"
         elif self.operation == 2:
-            if POZ_Z_D(self.num) != 0:
-                res = str(MUL_ZM_Z(self.num))
+            res = str(MUL_ZM_Z(self.num))
         
         self.res.setText(res)

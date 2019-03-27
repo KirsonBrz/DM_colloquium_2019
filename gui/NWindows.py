@@ -205,6 +205,7 @@ class NModulesWindow2(QtWidgets.QMainWindow):
     
     def d_changed(self, i):
         self.numd = int(i)
+        self.count()
     
     
     # Очистка текста
@@ -236,7 +237,7 @@ class NModulesWindow2(QtWidgets.QMainWindow):
         text = self.n2.text()
         text = self.__clear_text(text)
         self.n2.setText(text)
-        self.num2 = self.num2.read_from_str(text)
+        self.num2.read_from_str(text)
         self.count()
         
     
@@ -251,7 +252,7 @@ class NModulesWindow2(QtWidgets.QMainWindow):
         elif self.operation == 3:
             res = str(MUL_Nk_N(self.num1, self.numd))
         elif self.operation == 4:
-            tmp = MUL_Nk_N(self.num2, self.numd)
-            if COM_NN_D(self.n1, tmp) != 1:
+            tmp = MUL_ND_N(self.num2, self.numd)
+            if COM_NN_D(self.num1, tmp) != 1:
                 res = str(SUB_NDN_N(self.num1, self.num2, self.numd))
         self.res.setText(res)

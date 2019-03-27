@@ -341,11 +341,12 @@ class PModulesWindow3(QtWidgets.QMainWindow):
     # Очистка текста
     def __clear_text_int(self, text):
         b = 0
-        if text[0] == '-':
-            b = 1
-            text = text[1::]
-        elif text[0] == '+':
-            text = text[1::]
+        if text != '':
+            if text[0] == '-':
+                b = 1
+                text = text[1::]
+            elif text[0] == '+':
+                text = text[1::]
         
         cleared = self.__clear_text(text)
         
@@ -444,11 +445,12 @@ class PModulesWindowInput(QtWidgets.QMainWindow):
     # Очистка текста
     def __clear_text_int(self, text):
         b = 0
-        if text[0] == '-':
-            b = 1
-            text = text[1::]
-        elif text[0] == '+':
-            text = text[1::]
+        if text != '':
+            if text[0] == '-':
+                b = 1
+                text = text[1::]
+            elif text[0] == '+':
+                text = text[1::]
         
         cleared = self.__clear_text(text)
         

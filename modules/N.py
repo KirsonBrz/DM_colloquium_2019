@@ -106,19 +106,22 @@ def SUB_NN_N (N1, N2):
 
 # N-6
 def MUL_ND_N (B, d):
-    C = B.copy()
-    k = 0
-    i = 0
-    
-    while i <= B.n:
-        C[i] = C[i]*d + k
-        k = C[i] // 10
-        C[i] = C[i] % 10
-        i += 1
-    
-    if k > 0:
-        C.append(k)
-        C.n += 1
+    if d == 0:
+        C = Natural()
+    else:
+        C = B.copy()
+        k = 0
+        i = 0
+        
+        while i <= B.n:
+            C[i] = C[i]*d + k
+            k = C[i] // 10
+            C[i] = C[i] % 10
+            i += 1
+        
+        if k > 0:
+            C.append(k)
+            C.n += 1
     
     return C
 

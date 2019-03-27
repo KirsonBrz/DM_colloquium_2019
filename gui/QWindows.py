@@ -52,7 +52,7 @@ class QModulesWindow1(QtWidgets.QMainWindow):
         self.q2m = self.ui.line_q2m
         self.q2n = self.ui.line_q2n
         self.num1 = Rational()
-        self.num2 = Rational()
+        self.num2 = self.num1.copy()
         self.res = self.ui.result
         # Присоеднинение методов
         self.ui.pushButton_return.clicked.connect(self.pushButton_return_clicked)
@@ -91,11 +91,12 @@ class QModulesWindow1(QtWidgets.QMainWindow):
     # Очистка текста
     def __clear_text_int(self, text):
         b = 0
-        if text[0] == '-':
-            b = 1
-            text = text[1::]
-        elif text[0] == '+':
-            text = text[1::]
+        if text != '':
+            if text[0] == '-':
+                b = 1
+                text = text[1::]
+            elif text[0] == '+':
+                text = text[1::]
         
         cleared = self.__clear_text(text)
         if cleared != '0' and b == 1:
@@ -200,11 +201,12 @@ class QModulesWindow2(QtWidgets.QMainWindow):
     # Очистка текста
     def __clear_text_int(self, text):
         b = 0
-        if text[0] == '-':
-            b = 1
-            text = text[1::]
-        elif text[0] == '+':
-            text = text[1::]
+        if text != '':
+            if text[0] == '-':
+                b = 1
+                text = text[1::]
+            elif text[0] == '+':
+                text = text[1::]
         
         cleared = self.__clear_text(text)
         
@@ -238,6 +240,6 @@ class QModulesWindow2(QtWidgets.QMainWindow):
         elif self.operation == 1:
             res = str(INT_Q_B(self.num))
         elif self.operation == 2:
-            if INQ_Q_B(self.num):
+            if INT_Q_B(self.num):
                 res = str(TRANS_Q_Z(self.num))
         self.res.setText(res)
