@@ -358,9 +358,9 @@ class PModulesWindow3(QtWidgets.QMainWindow):
     def count(self):
         res = "Error"
         if self.operation == 0:
-            res = str(MUL_PQ_P(nump, numq))
+            res = str(MUL_PQ_P(self.nump, self.numq))
         elif self.operation == 1:
-            res = str(MUL_Pxk_P(nump, numd))
+            res = str(MUL_Pxk_P(self.nump, self.numd))
         self.res.setText(res)
 
 
