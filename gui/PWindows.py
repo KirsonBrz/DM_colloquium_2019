@@ -319,6 +319,7 @@ class PModulesWindow3(QtWidgets.QMainWindow):
         text = self.d.text()
         text = self.__clear_text(text)
         self.numd = int(text)
+        self.d.setText(text)
         self.count()        
         
     
