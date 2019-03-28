@@ -22,10 +22,11 @@ def POZ_Z_D(b):
 # Z-3
 def MUL_ZM_Z(z):
     num = z.copy()
-    if num.b == 0:
-        num.b = 1
-    else:
-        num.b = 0
+    if POZ_Z_D(num) != 0:
+        if num.b == 0:
+            num.b = 1
+        else:
+            num.b = 0
     return num
 
 
