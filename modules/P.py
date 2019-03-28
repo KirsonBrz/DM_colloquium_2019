@@ -68,6 +68,7 @@ def MUL_Pxk_P(a, k):
         for i in range(k):
             c[i] = Rational()
         c.m = c.m + k
+    c.m = DEG_P_N(c)
     return c
 
 
@@ -114,6 +115,7 @@ def MUL_PP_P(c1, c2):
         tmp = MUL_PQ_P(c1, c2[i])
         tmp = MUL_Pxk_P(tmp, i)
         c = ADD_PP_P(c, tmp)
+    с.m = DEG_P_N(c)
     return c
 
 
@@ -192,28 +194,30 @@ def GCF_PP_P(A, B):
 
 # P-12
 def DER_P_P(C):
-    m = DEG_P_N(C)
-    
     P = Polinomial()
-    P.clear()
-    I = Integer()
-    i = 0
-    while i < m:
-        I = TRANS_N_Z(ADD_1N_N(TRANS_Z_N(I)))
-        z = TRANS_Z_Q(I)
-        # вычисление производной
-        P.append(MUL_QQ_Q(C[i+1], z))
-        i += 1
+    if C.m != 0 or (POZ_Z_D(C[0].m) != 0):
+        m = DEG_P_N(C)
         
-    P.m = DEG_P_N(P)
+        P.clear()
+        I = Integer()
+        i = 0
+        while i < m:
+            I = TRANS_N_Z(ADD_1N_N(TRANS_Z_N(I)))
+            z = TRANS_Z_Q(I)
+            # вычисление производной
+            P.append(MUL_QQ_Q(C[i+1], z))
+            i += 1
+            
+        P.m = DEG_P_N(P)
     return P
 
 
 # P-13
 def NMR_P_P(f):
-    Q = Polinomial(1, 1, 1)
-    while Q.m != 0 or Q[0].m.n != 0:
-        p = DER_P_P(f)
-        Q = GCF_PP_P(f, p)
-        f = DIV_PP_P(f, Q)
+    if f.m != 0 or (POZ_Z_D(f[0].m) != 0):
+        Q = Polinomial(1, 1, 1)
+        while Q.m != 0 or Q[0].m.n != 0:
+            p = DER_P_P(f)
+            Q = GCF_PP_P(f, p)
+            f = DIV_PP_P(f, Q)
     return f

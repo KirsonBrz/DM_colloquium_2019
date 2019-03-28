@@ -251,7 +251,7 @@
      <string notr="true">color: white; background-color: #0D66FF;</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

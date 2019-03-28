@@ -106,7 +106,7 @@ class Ui_PModulesWindow3(object):
         self.pushButton_inputp.setText(_translate("PModulesWindow3", "Ввести"))
         self.line_qm.setText(_translate("PModulesWindow3", "0"))
         self.lind_d.setText(_translate("PModulesWindow3", "0"))
-        self.line_qn.setText(_translate("PModulesWindow3", "0"))
+        self.line_qn.setText(_translate("PModulesWindow3", "1"))
         self.pushButton_return.setText(_translate("PModulesWindow3", "<-"))
 
 

@@ -231,7 +231,14 @@ class PModulesWindow2(QtWidgets.QMainWindow):
         elif self.operation == 1:
             res = str(DEG_P_N(self.nump))
         elif self.operation == 2:
-            res = str(FAC_P_Q(self.nump))
+            f = True
+            i = 0
+            while i <= self.nump.m and f:
+                if POZ_Z_D(self.nump[i].m) == 0:
+                    f = False
+                i += 1
+            if f:
+                res = str(FAC_P_Q(self.nump))
         elif self.operation == 3:
             res = str(DER_P_P(self.nump))
         elif self.operation == 4:
@@ -399,6 +406,7 @@ class PModulesWindowInput(QtWidgets.QMainWindow):
         
     def finish_clicked(self):
         self.hide()
+        self.nump.m = DEG_P_N(self.nump)
         self.output.append(self.nump.copy())
         self.clear()
         self.main.show()

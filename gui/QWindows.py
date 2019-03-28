@@ -149,7 +149,7 @@ class QModulesWindow1(QtWidgets.QMainWindow):
         elif self.operation == 2:
             res = str(MUL_QQ_Q(self.num1, self.num2))
         elif self.operation == 3:
-            if POZ_Z_D(num2.m) != 0:
+            if POZ_Z_D(self.num2.m) != 0:
                 res = str(DIV_QQ_Q(self.num1, self.num2))
         self.res.setText(res)
 

@@ -46,6 +46,8 @@ class Integer(Natural):
         string = super().__str__()
         if self.b == 1:
             string = '-' + string
+        else:
+            string = '+' + string
         return string
     
     
@@ -73,7 +75,15 @@ class Rational:
     
     
     def __str__(self):
-        return str(self.m)+'/'+str(self.n)
+        # Если числитель 0
+        if self.m.n == 0 and self.m[0] == 0:
+            string = '0'
+        # Если знаменатель 1
+        elif self.n.n == 0 and self.n[0] == 1:
+            string = str(self.m)
+        else:
+            string = str(self.m)+'/'+str(self.n)
+        return string
         
 
 class Polinomial (list):
@@ -93,6 +103,10 @@ class Polinomial (list):
         p.reverse()
         string = ''
         for i in range(p.m):
-            string += '('+str(p[i])+")x^"+str(p.m-i)+' + '
+            # Если числитель не ноль
+            if p[i].m.n != 0 or p[i].m[0] != 0:
+                string += str(p[i])+"x^"+str(p.m-i)
         string += str(p[p.m])
+        if string[0] == '+':
+            string = string[1::]
         return string

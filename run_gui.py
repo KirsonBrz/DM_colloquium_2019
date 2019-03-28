@@ -44,7 +44,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def button_P_clicked(self):
         self.hide()
-        self.papp.show()   
+        self.papp.show()
         
 
 def main():
