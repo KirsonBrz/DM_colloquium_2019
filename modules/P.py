@@ -115,7 +115,7 @@ def MUL_PP_P(c1, c2):
         tmp = MUL_PQ_P(c1, c2[i])
         tmp = MUL_Pxk_P(tmp, i)
         c = ADD_PP_P(c, tmp)
-    с.m = DEG_P_N(c)
+    c.m = DEG_P_N(c)
     return c
 
 

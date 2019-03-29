@@ -144,11 +144,17 @@ class PModulesWindow1(QtWidgets.QMainWindow):
         elif self.operation == 2:
             res = str(MUL_PP_P(self.nump1, self.nump2))
         elif self.operation == 3:
-            res = str(DIV_PP_P(self.nump1, self.nump2))
+            if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0:
+                res = str(DIV_PP_P(self.nump1, self.nump2))
         elif self.operation == 4:
-            res = str(MOD_PP_P(self.nump1, self.nump2))
+            if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0:
+                res = str(MOD_PP_P(self.nump1, self.nump2))
         elif self.operation == 5:
-            res = str(GCF_PP_P(self.nump1, self.nump2))
+            if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0 \
+                   or \
+               self.nump1.m != 0 and POZ_Z_D(self.nump1[0].m) != 0:
+                
+                res = str(GCF_PP_P(self.nump1, self.nump2))
         self.res.setText(res)
 
 
@@ -401,6 +407,7 @@ class PModulesWindowInput(QtWidgets.QMainWindow):
         self.nump[0] = self.numq
         self.qm.setText("0")
         self.qn.setText("1")
+        self.ui.index.setText("Введите коэффициент 0")
         self.res.setText(str(self.nump))
         
         
