@@ -150,9 +150,9 @@ class PModulesWindow1(QtWidgets.QMainWindow):
             if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0:
                 res = str(MOD_PP_P(self.nump1, self.nump2))
         elif self.operation == 5:
-            if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0 \
+            if self.nump2.m != 0 or POZ_Z_D(self.nump2[0].m) != 0 \
                    or \
-               self.nump1.m != 0 and POZ_Z_D(self.nump1[0].m) != 0:
+               self.nump1.m != 0 or POZ_Z_D(self.nump1[0].m) != 0:
                 
                 res = str(GCF_PP_P(self.nump1, self.nump2))
         self.res.setText(res)

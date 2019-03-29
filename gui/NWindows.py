@@ -138,7 +138,7 @@ class NModulesWindow1(QtWidgets.QMainWindow):
                 
         elif self.operation == 7:
             if (self.num1.n != 0 or self.num1[0] != 0) \
-                   and \
+                   or \
                 (self.num2.n != 0 or self.num2[0] != 0):
                 
                 res = str(GCF_NN_N(self.num1, self.num2))
