@@ -427,9 +427,9 @@ class PModulesWindowInput(QtWidgets.QMainWindow):
     def forward_clicked(self):
         self.nump[self.nump.m] = self.numq.copy()
         self.numq = Rational()
+        self.res.setText(str(self.nump))
         self.nump.append(self.numq)
         self.nump.m += 1
-        self.res.setText(str(self.nump))
         self.qm.setText("0")
         self.qn.setText("1")
         self.ui.index.setText("Введите коэффициент "+str(self.nump.m))

@@ -106,7 +106,12 @@ class Polinomial (list):
             # Если числитель не ноль
             if p[i].m.n != 0 or p[i].m[0] != 0:
                 string += str(p[i])+"x^"+str(p.m-i)
-        string += str(p[p.m])
-        if string[0] == '+':
+                
+        if p[p.m].m.n != 0 or p[p.m].m[0] != 0:
+            string += str(p[p.m])
+        
+        if string == '':
+            string = '0'
+        elif string[0] == '+':
             string = string[1::]
         return string
