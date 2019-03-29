@@ -15,7 +15,7 @@
 Установка PyQt5:
 
 Windows:
-1) Воспользоваться утилитой pip (написать в cmd):
+1) Воспользоваться утилитой pip в консоли (сочетание клавиш win+r, далее написать cmd или powershell, нажать "выполнить", далее писать команды):
 pip3 install pyqt5 pyqt5-tools
 2) Скачать с официального сайта:
 https://www.riverbankcomputing.com/software/pyqt/download5
