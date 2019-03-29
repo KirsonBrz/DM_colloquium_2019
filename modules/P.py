@@ -80,7 +80,7 @@ def LED_P_Q(C):
 # P-6
 def DEG_P_N(P):
     i = len(P)-1
-    while i > 0 and P[i].m.n == 0 and P[i].m[0] == 0:
+    while i > 0 and POZ_Z_D(P[i].m) == 0:
         P.pop()
         i -= 1
     P.m = i 
@@ -121,8 +121,8 @@ def MUL_PP_P(c1, c2):
 
 # P-9
 def DIV_PP_P(p1, p2):
-    if p2.m == 0 and p2[0].m.n == 0 and p2[0].m[0] == 0:
-        assert False
+    if p2.m == 0 and POZ_Z_D(p2[0].m) == 0:
+        raise ZeroDivisionError
     else:
         n1 = p1.copy()
         n2 = p2.copy()
@@ -148,8 +148,8 @@ def DIV_PP_P(p1, p2):
 
 # P-10
 def MOD_PP_P(p1, p2):
-    if p2.m == 0 and p2[0].m.n == 0 and p2[0].m[0] == 0:
-        assert False
+    if p2.m == 0 and POZ_Z_D(p2[0].m) == 0:
+        raise ZeroDivisionError
     else:
         c1 = p1.copy()
         c2 = p2.copy()
@@ -167,9 +167,9 @@ def GCF_PP_P(A, B):
     a = A.copy()
     b = B.copy()
     # Пока не (a == 0 или b == 0)
-    while not ((a.m == 0 and a[0].m.n == 0 and a[0].m[0] == 0) \
+    while not ((a.m == 0 and POZ_Z_D(a[0].m)) \
                                 or \
-               (b.m == 0 and b[0].m.n == 0 and b[0].m[0] == 0)):
+               (b.m == 0 and POZ_Z_D(b[0].m) == 0)):
         
         if a.m > b.m:
             a = MOD_PP_P(a, b)
@@ -178,7 +178,7 @@ def GCF_PP_P(A, B):
             b = MOD_PP_P(b, a)
             b.m = DEG_P_N(b)
     
-    if (b.m == 0 and b[0].m.n == 0 and b[0].m[0] == 0):
+    if b.m == 0 and POZ_Z_D(b[0].m) == 0:
         nod = a.copy()
     else:
         nod = b.copy()

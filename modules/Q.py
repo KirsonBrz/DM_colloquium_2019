@@ -6,7 +6,7 @@ from modules.Z import *
 # Q-1
 def RED_Q_Q(q1):
     q = q1.copy()
-    if q.m.n != 0 or q.m[0] != 0:
+    if POZ_Z_D(q.m) != 0:
         b = q.m.b
         gcf = TRANS_N_Z(GCF_NN_N(ABS_Z_N(q.m), q.n))
         q.m = DIV_ZZ_Z(TRANS_N_Z(ABS_Z_N(q.m)), gcf)
