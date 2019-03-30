@@ -1,0 +1,3 @@
+#include "winuser.h"
+3 RCDATA "run_gui.build/__constants.bin"
+2 ICON MOVEABLE PURE LOADONCALL DISCARDABLE "D:/Github/DM_colloquium_2019/gui/resources/icon.ico"
