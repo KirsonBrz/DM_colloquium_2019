@@ -144,10 +144,10 @@ class PModulesWindow1(QtWidgets.QMainWindow):
         elif self.operation == 2:
             res = str(MUL_PP_P(self.nump1, self.nump2))
         elif self.operation == 3:
-            if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0:
+            if self.nump2.m != 0 or POZ_Z_D(self.nump2[0].m) != 0:
                 res = str(DIV_PP_P(self.nump1, self.nump2))
         elif self.operation == 4:
-            if self.nump2.m != 0 and POZ_Z_D(self.nump2[0].m) != 0:
+            if self.nump2.m != 0 or POZ_Z_D(self.nump2[0].m) != 0:
                 res = str(MOD_PP_P(self.nump1, self.nump2))
         elif self.operation == 5:
             if self.nump2.m != 0 or POZ_Z_D(self.nump2[0].m) != 0 \
