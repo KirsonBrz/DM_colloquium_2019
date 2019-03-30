@@ -167,7 +167,7 @@ def GCF_PP_P(A, B):
     a = A.copy()
     b = B.copy()
     # Пока не (a == 0 или b == 0)
-    while not ((a.m == 0 and POZ_Z_D(a[0].m)) \
+    while not ((a.m == 0 and POZ_Z_D(a[0].m) == 0) \
                                 or \
                (b.m == 0 and POZ_Z_D(b[0].m) == 0)):
         

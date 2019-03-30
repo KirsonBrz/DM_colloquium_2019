@@ -9050,6 +9050,8 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         PyObject *tmp_compexpr_left_1;
         PyObject *tmp_compexpr_right_1;
         PyObject *tmp_source_name_1;
+        PyObject *tmp_compexpr_left_2;
+        PyObject *tmp_compexpr_right_2;
         PyObject *tmp_called_name_1;
         PyObject *tmp_mvar_value_1;
         PyObject *tmp_args_element_name_1;
@@ -9059,11 +9061,11 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         int tmp_and_left_truth_2;
         PyObject *tmp_and_left_value_2;
         PyObject *tmp_and_right_value_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_source_name_3;
         PyObject *tmp_compexpr_left_3;
         PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_source_name_3;
+        PyObject *tmp_compexpr_left_4;
+        PyObject *tmp_compexpr_right_4;
         PyObject *tmp_called_name_2;
         PyObject *tmp_mvar_value_2;
         PyObject *tmp_args_element_name_2;
@@ -9202,10 +9204,24 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         frame_a89d0aed73fcbe272f9f65e7dc7d7867->m_frame.f_lineno = 170;
         {
             PyObject *call_args[] = { tmp_args_element_name_1 };
-            tmp_and_right_value_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
+            tmp_compexpr_left_2 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
         }
 
         Py_DECREF( tmp_args_element_name_1 );
+        if ( tmp_compexpr_left_2 == NULL )
+        {
+            assert( ERROR_OCCURRED() );
+
+            FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+            exception_lineno = 170;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_compexpr_right_2 = const_int_0;
+        tmp_and_right_value_1 = RICH_COMPARE_EQ_OBJECT_OBJECT( tmp_compexpr_left_2, tmp_compexpr_right_2 );
+        Py_DECREF( tmp_compexpr_left_2 );
         if ( tmp_and_right_value_1 == NULL )
         {
             assert( ERROR_OCCURRED() );
@@ -9260,8 +9276,8 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         }
 
         tmp_source_name_3 = var_b;
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE( tmp_source_name_3, const_str_plain_m );
-        if ( tmp_compexpr_left_2 == NULL )
+        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE( tmp_source_name_3, const_str_plain_m );
+        if ( tmp_compexpr_left_3 == NULL )
         {
             assert( ERROR_OCCURRED() );
 
@@ -9272,9 +9288,9 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = const_int_0;
-        tmp_and_left_value_2 = RICH_COMPARE_EQ_OBJECT_OBJECT( tmp_compexpr_left_2, tmp_compexpr_right_2 );
-        Py_DECREF( tmp_compexpr_left_2 );
+        tmp_compexpr_right_3 = const_int_0;
+        tmp_and_left_value_2 = RICH_COMPARE_EQ_OBJECT_OBJECT( tmp_compexpr_left_3, tmp_compexpr_right_3 );
+        Py_DECREF( tmp_compexpr_left_3 );
         if ( tmp_and_left_value_2 == NULL )
         {
             assert( ERROR_OCCURRED() );
@@ -9376,11 +9392,11 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         frame_a89d0aed73fcbe272f9f65e7dc7d7867->m_frame.f_lineno = 172;
         {
             PyObject *call_args[] = { tmp_args_element_name_2 };
-            tmp_compexpr_left_3 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, call_args );
+            tmp_compexpr_left_4 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, call_args );
         }
 
         Py_DECREF( tmp_args_element_name_2 );
-        if ( tmp_compexpr_left_3 == NULL )
+        if ( tmp_compexpr_left_4 == NULL )
         {
             assert( ERROR_OCCURRED() );
 
@@ -9391,9 +9407,9 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = const_int_0;
-        tmp_and_right_value_2 = RICH_COMPARE_EQ_OBJECT_OBJECT( tmp_compexpr_left_3, tmp_compexpr_right_3 );
-        Py_DECREF( tmp_compexpr_left_3 );
+        tmp_compexpr_right_4 = const_int_0;
+        tmp_and_right_value_2 = RICH_COMPARE_EQ_OBJECT_OBJECT( tmp_compexpr_left_4, tmp_compexpr_right_4 );
+        Py_DECREF( tmp_compexpr_left_4 );
         if ( tmp_and_right_value_2 == NULL )
         {
             assert( ERROR_OCCURRED() );
@@ -9456,8 +9472,8 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_compexpr_left_5;
+        PyObject *tmp_compexpr_right_5;
         PyObject *tmp_source_name_5;
         PyObject *tmp_source_name_6;
         if ( var_a == NULL )
@@ -9476,8 +9492,8 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         }
 
         tmp_source_name_5 = var_a;
-        tmp_compexpr_left_4 = LOOKUP_ATTRIBUTE( tmp_source_name_5, const_str_plain_m );
-        if ( tmp_compexpr_left_4 == NULL )
+        tmp_compexpr_left_5 = LOOKUP_ATTRIBUTE( tmp_source_name_5, const_str_plain_m );
+        if ( tmp_compexpr_left_5 == NULL )
         {
             assert( ERROR_OCCURRED() );
 
@@ -9490,7 +9506,7 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         }
         if ( var_b == NULL )
         {
-            Py_DECREF( tmp_compexpr_left_4 );
+            Py_DECREF( tmp_compexpr_left_5 );
             exception_type = PyExc_UnboundLocalError;
             Py_INCREF( exception_type );
             exception_value = PyUnicode_FromFormat( "local variable '%s' referenced before assignment", "b" );
@@ -9504,21 +9520,21 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         }
 
         tmp_source_name_6 = var_b;
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE( tmp_source_name_6, const_str_plain_m );
-        if ( tmp_compexpr_right_4 == NULL )
+        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE( tmp_source_name_6, const_str_plain_m );
+        if ( tmp_compexpr_right_5 == NULL )
         {
             assert( ERROR_OCCURRED() );
 
             FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-            Py_DECREF( tmp_compexpr_left_4 );
+            Py_DECREF( tmp_compexpr_left_5 );
 
             exception_lineno = 174;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = RICH_COMPARE_BOOL_GT_OBJECT_OBJECT( tmp_compexpr_left_4, tmp_compexpr_right_4 );
-        Py_DECREF( tmp_compexpr_left_4 );
-        Py_DECREF( tmp_compexpr_right_4 );
+        tmp_res = RICH_COMPARE_BOOL_GT_OBJECT_OBJECT( tmp_compexpr_left_5, tmp_compexpr_right_5 );
+        Py_DECREF( tmp_compexpr_left_5 );
+        Py_DECREF( tmp_compexpr_right_5 );
         if ( tmp_res == -1 )
         {
             assert( ERROR_OCCURRED() );
@@ -9860,11 +9876,11 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         int tmp_and_left_truth_3;
         nuitka_bool tmp_and_left_value_3;
         nuitka_bool tmp_and_right_value_3;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_source_name_7;
         PyObject *tmp_compexpr_left_6;
         PyObject *tmp_compexpr_right_6;
+        PyObject *tmp_source_name_7;
+        PyObject *tmp_compexpr_left_7;
+        PyObject *tmp_compexpr_right_7;
         PyObject *tmp_called_name_7;
         PyObject *tmp_mvar_value_7;
         PyObject *tmp_args_element_name_9;
@@ -9887,8 +9903,8 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         }
 
         tmp_source_name_7 = var_b;
-        tmp_compexpr_left_5 = LOOKUP_ATTRIBUTE( tmp_source_name_7, const_str_plain_m );
-        if ( tmp_compexpr_left_5 == NULL )
+        tmp_compexpr_left_6 = LOOKUP_ATTRIBUTE( tmp_source_name_7, const_str_plain_m );
+        if ( tmp_compexpr_left_6 == NULL )
         {
             assert( ERROR_OCCURRED() );
 
@@ -9899,9 +9915,9 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_5 = const_int_0;
-        tmp_res = RICH_COMPARE_BOOL_EQ_OBJECT_OBJECT( tmp_compexpr_left_5, tmp_compexpr_right_5 );
-        Py_DECREF( tmp_compexpr_left_5 );
+        tmp_compexpr_right_6 = const_int_0;
+        tmp_res = RICH_COMPARE_BOOL_EQ_OBJECT_OBJECT( tmp_compexpr_left_6, tmp_compexpr_right_6 );
+        Py_DECREF( tmp_compexpr_left_6 );
         if ( tmp_res == -1 )
         {
             assert( ERROR_OCCURRED() );
@@ -9992,11 +10008,11 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
         frame_a89d0aed73fcbe272f9f65e7dc7d7867->m_frame.f_lineno = 181;
         {
             PyObject *call_args[] = { tmp_args_element_name_9 };
-            tmp_compexpr_left_6 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_7, call_args );
+            tmp_compexpr_left_7 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_7, call_args );
         }
 
         Py_DECREF( tmp_args_element_name_9 );
-        if ( tmp_compexpr_left_6 == NULL )
+        if ( tmp_compexpr_left_7 == NULL )
         {
             assert( ERROR_OCCURRED() );
 
@@ -10007,9 +10023,9 @@ static PyObject *impl_modules$P$$$function_11_GCF_PP_P( struct Nuitka_FunctionOb
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_6 = const_int_0;
-        tmp_res = RICH_COMPARE_BOOL_EQ_OBJECT_OBJECT( tmp_compexpr_left_6, tmp_compexpr_right_6 );
-        Py_DECREF( tmp_compexpr_left_6 );
+        tmp_compexpr_right_7 = const_int_0;
+        tmp_res = RICH_COMPARE_BOOL_EQ_OBJECT_OBJECT( tmp_compexpr_left_7, tmp_compexpr_right_7 );
+        Py_DECREF( tmp_compexpr_left_7 );
         if ( tmp_res == -1 )
         {
             assert( ERROR_OCCURRED() );

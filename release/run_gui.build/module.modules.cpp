@@ -31,11 +31,11 @@ PyObject *module_modules;
 PyDictObject *moduledict_modules;
 
 /* The declarations of module constants used, if any. */
+static PyObject *const_str_digest_41cb6906a0090f45700f92f5b01bb797;
+static PyObject *const_list_str_digest_41cb6906a0090f45700f92f5b01bb797_list;
 extern PyObject *const_int_0;
-static PyObject *const_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a;
 extern PyObject *const_str_plain__frozen_importlib_external;
 extern PyObject *const_str_plain___path__;
-static PyObject *const_list_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a_list;
 extern PyObject *const_str_plain_modules;
 extern PyObject *const_str_plain__NamespacePath;
 
@@ -45,9 +45,9 @@ static bool constants_created = false;
 /* Function to create module private constants. */
 static void createModuleConstants( void )
 {
-    const_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a = UNSTREAM_STRING_ASCII( &constant_bin[ 440140 ], 36, 0 );
-    const_list_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a_list = PyList_New( 1 );
-    PyList_SET_ITEM( const_list_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a_list, 0, const_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a ); Py_INCREF( const_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a );
+    const_str_digest_41cb6906a0090f45700f92f5b01bb797 = UNSTREAM_STRING_ASCII( &constant_bin[ 440140 ], 36, 0 );
+    const_list_str_digest_41cb6906a0090f45700f92f5b01bb797_list = PyList_New( 1 );
+    PyList_SET_ITEM( const_list_str_digest_41cb6906a0090f45700f92f5b01bb797_list, 0, const_str_digest_41cb6906a0090f45700f92f5b01bb797 ); Py_INCREF( const_str_digest_41cb6906a0090f45700f92f5b01bb797 );
 
     constants_created = true;
 }
@@ -390,7 +390,7 @@ MOD_INIT_DECL( modules )
             goto module_exception_exit;
         }
         tmp_call_arg_element_1 = const_str_plain_modules;
-        tmp_call_arg_element_2 = LIST_COPY( const_list_str_digest_14bfbc97f2ae7c3352cfe21d965fb37a_list );
+        tmp_call_arg_element_2 = LIST_COPY( const_list_str_digest_41cb6906a0090f45700f92f5b01bb797_list );
         tmp_call_arg_element_3 = Py_None;
         {
             PyObject *call_args[] = { tmp_call_arg_element_1, tmp_call_arg_element_2, tmp_call_arg_element_3 };
