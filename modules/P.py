@@ -130,7 +130,7 @@ def DIV_PP_P(p1, p2):
         
         while DEG_P_N(n1) >= DEG_P_N(n2) \
                         and \
-              (n1.m != 0 or n1[0].m.n != 0 or n1[0].m[0] != 0):
+              (n1.m != 0 or POZ_Z_D(n1[0].m) != 0):
             
             m = n1.m - n2.m
             q = DIV_QQ_Q(n1[n1.m], n2[n2.m])
@@ -138,7 +138,6 @@ def DIV_PP_P(p1, p2):
             sub = MUL_PQ_P(sub, q)
             
             n1 = SUB_PP_P(n1, sub)
-            
             n3[m] = q
             
         n3.m = DEG_P_N(n3)
